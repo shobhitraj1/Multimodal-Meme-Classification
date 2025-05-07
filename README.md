@@ -9,6 +9,8 @@ The project was developed for the [Natural Language Processing](https://techtree
 - **Mixture-of-Experts:** Adaptive expert fusion using a gating network to improve representational capacity.
 - **Contrastive Learning:** Alignment of text, image, and fused embeddings through contrastive loss in shared embedding space.
 - **Classification:** Transformer-based classifier predicts multi-label depression (RESTORE) and single-label anxiety (AxiOM).
+- **Ablation Study:** Comprehensive experiments performed to analyze the impact of each module (e.g., contrastive loss, MoE, OCR, figurative reasoning).
+- **Error Analysis:** Investigated common misclassifications, especially for overlapping meme types and ambiguous sarcastic content, with qualitative examples.
 
 **<h4>📋 Installation & Usage:</h4>**
 - Clone the repository and install the following Python libraries:
@@ -26,6 +28,74 @@ pip install pandas numpy matplotlib scikit-learn jupyter transformers torch torc
 - [Depression Model Weights](https://drive.google.com/file/d/1WGVLdLLJmz5aRu7Xj175sIul4ViqA6Dp/view?usp=sharing)
 - [AxiOM (Anxiety Meme Classification)](https://drive.google.com/file/d/1doU9FE1tJ-0IL4tKZUOOp76JkXKuTkFU/view?usp=drive_link)
 - [RESTORE (Depression Meme Classification)](https://drive.google.com/file/d/1LQoyq_ZjHJih7hxJ2yJ_OrZhOIE_BZwB/view?usp=drive_link)
+
+**<h4>📊 Results:</h4>**
+- AxiOM Dataset (Anxiety Meme Classification) Results:
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Macro-F1</th>
+      <th>Weighted-F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OCR + BERT</td>
+      <td>0.6163</td>
+      <td>0.6143</td>
+    </tr>
+    <tr>
+      <td>OCR + Mental-BERT</td>
+      <td>0.6235</td>
+      <td>0.6232</td>
+    </tr>
+    <tr>
+      <td>OCR + LLAVA + Mental-BERT</td>
+      <td>0.6183</td>
+      <td>0.6173</td>
+    </tr>
+    <tr>
+      <td><strong>Proposed Approach</strong></td>
+      <td><strong>0.6851</strong></td>
+      <td><strong>0.6848</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+- RESTORE Dataset (Depression Meme Multi-label Classification) Results:
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Macro-F1</th>
+      <th>Weighted-F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OCR + BERT</td>
+      <td>0.6355</td>
+      <td>0.6347</td>
+    </tr>
+    <tr>
+      <td>OCR + Mental-BERT</td>
+      <td>0.6313</td>
+      <td>0.6249</td>
+    </tr>
+    <tr>
+      <td>OCR + LLAVA + Mental-BERT</td>
+      <td>0.6298</td>
+      <td>0.6263</td>
+    </tr>
+    <tr>
+      <td><strong>Proposed Approach</strong></td>
+      <td><strong>0.6606</strong></td>
+      <td><strong>0.6628</strong></td>
+    </tr>
+  </tbody>
+</table>
+
 
 **<h4>🧑‍🤝‍🧑 Other Contributors:</h4>**
 My IIIT Delhi batchmates Manan Aggarwal & Souparno Ghose also contributed in this project.
