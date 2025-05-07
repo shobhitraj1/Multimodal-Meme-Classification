@@ -4,6 +4,7 @@ This repository presents a multimodal deep learning project for classifying ment
 The project was developed for the [Natural Language Processing](https://techtree.iiitd.edu.in/viewDescription/filename?=CSE556) course at IIIT Delhi in Winter 2025.
 
 **<h4>🛠️ Features:</h4>**
+- **OCR Extraction via Google Docs API:** Extracted textual content from memes using Google Drive and Docs API, enabling high-accuracy OCR by converting images to Google Docs and parsing the returned text. Scripts are available in the `/Baselines` folder.
 - **Multimodal Pipeline:** Combines OCR-based text and image content using Mental-RoBERTa and CLIP Vision encoders.
 - **Cross-Attention Fusion:** Cross-modal attention layers to align and integrate features from text and image modalities.
 - **Mixture-of-Experts:** Adaptive expert fusion using a gating network to improve representational capacity.
