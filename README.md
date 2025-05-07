@@ -1,6 +1,6 @@
 # Multimodal-Meme-Classification
 
-This repository presents a multimodal deep learning project for classifying mental health-related memes, combining both textual and visual signals. The system is designed for robust multi-label and single-label classification across depression and anxiety categories. <br>
+This repository presents a multimodal deep learning project for classifying mental health-related memes, combining both textual and visual features. The system is designed for robust multi-label and single-label classification across depression and anxiety categories. <br>
 The project was developed for the [Natural Language Processing](https://techtree.iiitd.edu.in/viewDescription/filename?=CSE556) course at IIIT Delhi in Winter 2025.
 
 **<h4>🛠️ Features:</h4>**
