@@ -1,0 +1,27 @@
+// Flag to control iterations
+let keepRunning = true;
+
+// Function to check the button and click if not disabled
+function checkAndClick() {
+  if (!keepRunning) return; // Stop if flag is false
+
+  const button = document.querySelector("#yDmH0d > c-wiz > div > div.Hu42fb > div.OX2gTc.DqVtX.dLSs8b.p7Awzb.fb0g6 > div.Kp2okb.lFgX0b > div > div > div.Kp2okb.SQyOec > div > div > div.voS0mf.EF5LSd > div > div:nth-child(3) > div:nth-child(1) > div > div > button");
+
+  if (button && !button.disabled) {
+    button.click();
+    console.log("Button clicked.");
+  }
+}
+
+// Call the function every second (1000 milliseconds)
+const intervalId = setInterval(() => {
+  if (!keepRunning) {
+    clearInterval(intervalId); // Stop further iterations if flag is false
+    console.log("Iterations stopped.");
+    return;
+  }
+  checkAndClick();
+}, 5000);
+
+// Example: To stop further iterations, set keepRunning to false
+// keepRunning = false;
